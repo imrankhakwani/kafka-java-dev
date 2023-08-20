@@ -10,7 +10,7 @@ import java.util.Properties;
 public class ProducerDemoWithCallback {
     private static final Logger log = LoggerFactory.getLogger(ProducerDemoWithCallback.class.getSimpleName());
     public static void main(String[] args) {
-        log.info("Hello World!");
+        log.info("Producer demo with callbacks.");
 
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
@@ -28,7 +28,7 @@ public class ProducerDemoWithCallback {
 
         for (int j = 0; j < 10; j++) {
             for (int i = 0; i < 30; i++) {
-                ProducerRecord<String, String> producerRecord = new ProducerRecord<>("java_demo", "Hello World " + i);
+                ProducerRecord<String, String> producerRecord = new ProducerRecord<>("temperature", "Hello World " + i);
 
                 producer.send(producerRecord, new Callback() {
                     @Override

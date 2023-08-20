@@ -10,7 +10,7 @@ import java.util.Properties;
 public class ProducerDemoKeys {
     private static final Logger log = LoggerFactory.getLogger(ProducerDemoKeys.class.getSimpleName());
     public static void main(String[] args) {
-        log.info("Hello World!");
+        log.info("Producer demo with keys.");
 
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
@@ -22,9 +22,9 @@ public class ProducerDemoKeys {
 
         for (int j = 0; j < 2; j++) {
             for (int i = 0; i < 10; i++) {
-                String topic = "demo_java";
+                String topic = "java_demo";
                 String key = "id_" + i;
-                String value = "Hello World " + i;
+                String value = "java demo " + i;
 
                 ProducerRecord<String, String> producerRecord = new ProducerRecord<>(topic, value, key);
                 producer.send(producerRecord, new Callback() {

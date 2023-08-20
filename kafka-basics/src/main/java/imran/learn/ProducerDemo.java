@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ProducerDemo {
     private static final Logger log = LoggerFactory.getLogger(ProducerDemo.class.getSimpleName());
     public static void main(String[] args) {
-        log.info("Hello World!");
+        log.info("Producer demo.");
 
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "127.0.0.1:9092");
