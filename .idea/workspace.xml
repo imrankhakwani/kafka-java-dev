@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c44e838-e055-4899-bc88-7266d68c1550" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/conductor-platform/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conductor-platform/platform-config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ConsumerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ConsumerDemoCooperative.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ConsumerDemoWithShutdown.java" afterDir="false" />
+    <list default="true" id="3c44e838-e055-4899-bc88-7266d68c1550" name="Changes" comment="Kafka Java producers and consumers added.">
+      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/src/main/java/imran/learn/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/src/main/java/imran/learn/kafka/wikimedia/WikimediaChangeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/src/main/java/imran/learn/kafka/wikimedia/WikimediaChangesProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/src/main/java/demos/kafka/opensearch/OpenSearchConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/src/main/java/imran/learn/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ProducerDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ProducerDemoKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ProducerDemoKeys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ProducerDemoWithCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ProducerDemoWithCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,28 +49,44 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="54f5d345-1d66-4f4c-a5fd-e82eacae30a8" />
+        <option name="url" value="https://github.com/imrankhakwani/kafka-java-dev.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2ThHLcb8YOEgpHJWKVj4BJGiwqm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "corretto-11",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="imran.learn" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.conductor-platform: Compose Deployment">
+  <component name="RunManager">
     <configuration name="ConsumerDemoCooperative" type="Application" factoryName="Application" singleton="false">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -125,7 +145,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="conductor-platform: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -136,14 +158,24 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="kafka-consumer-opensearch: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="kafka-consumer-opensearch/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.ConsumerDemoCooperative" />
       <item itemvalue="Application.ConsumerDemoWithShutdown" />
+      <item itemvalue="Docker.kafka-consumer-opensearch: Compose Deployment" />
       <item itemvalue="Docker.conductor-platform: Compose Deployment" />
       <item itemvalue="Gradle.kafka-java-dev [classes]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.kafka-consumer-opensearch: Compose Deployment" />
         <item itemvalue="Docker.conductor-platform: Compose Deployment" />
         <item itemvalue="Application.ConsumerDemoCooperative" />
         <item itemvalue="Application.ConsumerDemoWithShutdown" />
@@ -159,6 +191,19 @@
       <option name="presentableId" value="Default" />
       <updated>1691488342677</updated>
     </task>
+    <task id="LOCAL-00001" summary="Kafka Java producers and consumers added.">
+      <created>1692521686372</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692521686372</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Kafka Java producers and consumers added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Kafka Java producers and consumers added." />
   </component>
 </project>
