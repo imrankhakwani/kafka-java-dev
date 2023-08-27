@@ -46,15 +46,15 @@ public class ConsumerDemoWithShutdown {
         // Add the shutdown hook to runtime
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
-                log.info("A shutdown event is detected. Shutting down by calling consumer.wakeup()...");
-                consumer.wakeup();
+            log.info("A shutdown event is detected. Shutting down by calling consumer.wakeup()...");
+            consumer.wakeup();
 
-                // Join the main thread to allow the execution of main thread.
-                try {
-                    mainThread.join();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+            // Join the main thread to allow the execution of main thread.
+            try {
+                mainThread.join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             }
         });
 

@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c44e838-e055-4899-bc88-7266d68c1550" name="Changes" comment="Kafka Java producers and consumers added.">
-      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/src/main/java/imran/learn/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/src/main/java/imran/learn/kafka/wikimedia/WikimediaChangeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-producer-wikimedia/src/main/java/imran/learn/kafka/wikimedia/WikimediaChangesProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/src/main/java/demos/kafka/opensearch/OpenSearchConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/src/main/java/imran/learn/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ConsumerDemoWithShutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/imran/learn/ConsumerDemoWithShutdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-consumer-opensearch/src/main/java/demos/kafka/opensearch/OpenSearchConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-consumer-opensearch/src/main/java/demos/kafka/opensearch/OpenSearchConsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
